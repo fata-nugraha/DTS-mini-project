@@ -53,7 +53,7 @@ if (mysqli_num_rows($get_item_res) < 1) {
     <div class='card mb-3' style='max-width: 540px;text-align=center'>
     <div class='row no-gutters'>
      <div class='col-md-4'>
-     <img src="$s3path/$item_image.gif" alt="$item_title" style="width:195px;height:200px;"/>
+     <img src="$s3path/$item_image" alt="$item_title" style="width:195px;height:200px;"/>
      </div>
      <div class='col-md-8'>
        <div class='card-body'>

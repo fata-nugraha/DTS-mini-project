@@ -14,14 +14,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-SET @MYSQLDUMP_TEMP_LOG_BIN = @@SESSION.SQL_LOG_BIN;
-SET @@SESSION.SQL_LOG_BIN= 0;
-
---
--- GTID state at the beginning of the backup 
---
-
-SET @@GLOBAL.GTID_PURGED=/*!80000 '+'*/ '';
 
 --
 -- Table structure for table `store_categories`
@@ -87,7 +79,7 @@ CREATE TABLE `store_item_comment` (
   `username` varchar(80) NOT NULL,
   `comment` varchar(80) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,6 +88,7 @@ CREATE TABLE `store_item_comment` (
 
 LOCK TABLES `store_item_comment` WRITE;
 /*!40000 ALTER TABLE `store_item_comment` DISABLE KEYS */;
+INSERT INTO `store_item_comment` VALUES (9,8,'asd','test'),(10,1,'tes',''),(11,5,'andri',''),(12,4,'Tori Bukit',''),(13,5,'andri',''),(14,4,'Tori Bukit','ada kuning tidak kak ?');
 /*!40000 ALTER TABLE `store_item_comment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -165,7 +158,7 @@ CREATE TABLE `users` (
   `email` varchar(80) NOT NULL,
   `password` varchar(80) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -174,9 +167,9 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (3,'asd','asd@asd.asd','asd'),(4,'tes','supriyaanton@gmail.com','123456'),(5,'Ed','edward.jaya@gmail.com','asdfasdf'),(6,'andri','notenter19@gmail.com','hahaha123'),(7,'Tori Bukit','toribukit@gmail.com','12345'),(8,'vania','test5@gmail.com','12345678'),(9,'ilham','muhamadilhamfirdaus@hotmail.com','dts2020'),(10,'Test','test@dts.com','test123');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
-SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -187,4 +180,4 @@ SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-09-29 15:35:43
+-- Dump completed on 2020-10-01  2:34:02
